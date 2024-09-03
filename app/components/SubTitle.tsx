@@ -1,21 +1,21 @@
 'use client'
 
-interface TitleProps {
+interface SubTitleProps {
     label: string;
 }
 
-const Title: React.FC<TitleProps> = ({
+const SubTitle: React.FC<SubTitleProps> = ({
     label,
 }) => {
     return (
         <div
             className="
-                text-[32px]
+                text-[20px]
                 font-bold
                 text-white
-                mb-[48px]
+                mb-[24px]
                 relative
-                z-40
+                z-30
             "
         >
             {label}
@@ -23,4 +23,4 @@ const Title: React.FC<TitleProps> = ({
     )
 }
 
-export default Title;
+export default SubTitle;
