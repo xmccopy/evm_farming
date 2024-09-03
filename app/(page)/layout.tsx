@@ -84,7 +84,7 @@ export default function RootLayout({
                                 <a href="#" className="block rounded-md bg-gray-400 px-4 py-2 text-base font-medium text-white" aria-current="page">LOGO</a>
                                 <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     <div className="flex items-center justify-start gap-4 text-white">
-                                        <SiHiveBlockchain />
+                                        <FaEthereum />
                                         <p className="text-[16px]">EVM ファーミング</p>
                                     </div>
                                 </a>
