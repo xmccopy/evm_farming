@@ -60,7 +60,7 @@ export default function RootLayout({
                                 <div className="flex items-center justify-center border-white rounded-full w-[175px] h-[32px] border-[1px]">
                                     <div className="flex items-center justify-center gap-[16px]">
                                         <img src="/images/signin.png" alt="signin_icon" />
-                                        <p className="text-white text-[14px]">SIGN IN</p>
+                                        <a href="/signin"><p className="text-white text-[14px] cursor-pointer">SIGN IN</p></a>
                                     </div>
                                 </div>
                                 {/* <div className="hidden md:block">

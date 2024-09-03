@@ -206,12 +206,12 @@ export default function Home() {
                                             className="w-[340px] h-8 pl-2 pr-1.5 py-2.5 bg-white/30 rounded-[5px] shadow border border-white backdrop-blur-[20px]"
                                         />
                                         {passwordVisible ? (
-                                            <PiEyeClosed
+                                            <PiEye
                                                 className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"
                                                 onClick={togglePasswordVisibility}
                                             />
                                         ) : (
-                                            <PiEye
+                                            <PiEyeClosed
                                                 className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"
                                                 onClick={togglePasswordVisibility}
                                             />
