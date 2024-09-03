@@ -6,7 +6,7 @@ export default function Home() {
         <>
             <div>
                 <Title label="マイページ" />
-                <ChangeSetting title="パスワード変更" subvalue="12345678"/>
+                <ChangeSetting title="パスワード変更" subvalue="12345678" resultConfirm="パスワードを変更しました"/>
             </div>
         </>
     )

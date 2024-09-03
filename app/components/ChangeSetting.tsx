@@ -6,11 +6,13 @@ import { useState } from "react";
 interface ChangeSettingProps {
     title: string;
     subvalue: string;
+    resultConfirm: string;
 }
 
 const ChangeSetting: React.FC<ChangeSettingProps> = ({
     title,
-    subvalue
+    subvalue,
+    resultConfirm
 }) => {
     const router = useRouter();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -112,7 +114,7 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-60 flex items-start pt-[150px] justify-center z-40">
                     <div className="bg-[#2F2F8A] bg-opacity-80 p-6 rounded-md text-white w-[400px]">
-                        <h2 className="text-[20px] font-bold mb-[48px]">メールアドレスを変更しました</h2>
+                        <h2 className="text-[20px] font-bold mb-[48px]">{resultConfirm}</h2>
                         <div className="flex justify-end gap-4">
                             <button
                                 onClick={closeModal}
@@ -120,12 +122,6 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
                             >
                                 戻る
                             </button>
-                            {/* <button
-                                onClick={() => {}}
-                                className="bg-blue-500 text-white px-4 py-2 rounded-md"
-                            >
-                                確認
-                            </button> */}
                         </div>
                     </div>
                 </div>

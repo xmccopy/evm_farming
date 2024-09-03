@@ -6,7 +6,7 @@ export default function Home() {
         <>
             <div>
                 <Title label="マイページ" />
-                <ChangeSetting title="メールアドレス変更" subvalue="SAMPLE@MAILE.jp"/>
+                <ChangeSetting title="メールアドレス変更" subvalue="SAMPLE@MAILE.jp" resultConfirm="メールアドレスを変更しました"/>
             </div>
         </>
     )

@@ -88,19 +88,19 @@ export default function RootLayout({
                                         <p className="text-[16px]">EVM ファーミング</p>
                                     </div>
                                 </a>
-                                <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                <a href="/airdrop" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     <div className="flex items-center justify-start gap-4 text-white">
                                         <MdBubbleChart />
                                         <p className="text-[16px]">エアドロップ</p>
                                     </div>
                                 </a>
-                                <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                <a href="/introduce" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     <div className="flex items-center justify-start gap-4 text-white">
                                         <FaUserPlus />
                                         <p className="text-[16px]">紹介</p>
                                     </div>
                                 </a>
-                                <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                <a href="mypage" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     <div className="flex items-center justify-start gap-4 text-white">
                                         <FaHome />
                                         <p className="text-[16px]">マイページ</p>
@@ -117,7 +117,7 @@ export default function RootLayout({
                     </div>
                 </main>
 
-                <footer className="fixed bottom-0 left-0 right-0 mb-[24px] mx-auto flex items-center justify-center">
+                <footer className="pb-[24px] mx-auto flex items-center justify-center">
                     <p className="text-white text-[12px]">© 2024 XXXXXXX. All rights reserved.</p>
                 </footer>
             </div>
