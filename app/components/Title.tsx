@@ -14,6 +14,8 @@ const Title: React.FC<TitleProps> = ({
                 font-bold
                 text-white
                 mb-[48px]
+                relative
+                z-50
             "
         >
             {label}
