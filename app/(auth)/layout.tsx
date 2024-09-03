@@ -1,6 +1,10 @@
 'use client'
 
 import { useState } from "react";
+import { SiHiveBlockchain } from "react-icons/si";
+import { MdBubbleChart } from "react-icons/md";
+import { FaUserPlus } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 
 export default function RootLayout({
     children,
@@ -77,11 +81,31 @@ export default function RootLayout({
                     // <div className="md:hidden" id="mobile-menu">
                     <div className="" id="mobile-menu">
                         <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                            <a href="#" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-                            <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-                            <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-                            <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-                            <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Reports</a>
+                            <a href="#" className="block rounded-md bg-gray-400 px-4 py-2 text-base font-medium text-white" aria-current="page">LOGO</a>
+                            <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                <div className="flex items-center justify-start gap-4 text-white">
+                                    <SiHiveBlockchain/>
+                                    <p className="text-[16px]">EVM ファーミング</p>
+                                </div>
+                            </a>
+                            <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                <div className="flex items-center justify-start gap-4 text-white">
+                                    <MdBubbleChart />
+                                    <p className="text-[16px]">エアドロップ</p>
+                                </div>
+                            </a>
+                            <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                <div className="flex items-center justify-start gap-4 text-white">
+                                    <FaUserPlus />
+                                    <p className="text-[16px]">紹介</p>
+                                </div>
+                            </a>
+                            <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                                <div className="flex items-center justify-start gap-4 text-white">
+                                    <FaHome />
+                                    <p className="text-[16px]">マイページ</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 )}
