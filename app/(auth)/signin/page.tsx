@@ -23,7 +23,7 @@ export default function Home() {
       <div className=" text-white rounded-lg max-w-md w-full space-y-6">
         <h1 className="text-3xl font-bold text-center">SIGN IN</h1>
 
-        <div className="m-auto w-64 h-64">
+        <div className="m-auto w-48 h-48">
           {/* Placeholder for the graphic */}
           <img
             src="/images/main.png"
@@ -33,20 +33,21 @@ export default function Home() {
         </div>
 
         <form className="space-y-6">
-          <div>メールアドレス
+          <div>
+            <div className="px-2">メールアドレス</div>
             <input
               type="email"
               placeholder="メールアドレス"
-              className="w-full px-4 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
           </div>
 
           <div className="relative">
-            <div>パスワード</div>
+            <div className="px-2">パスワード</div>
             <input
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
-              className="w-full px-4 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
             <br />
             <button
