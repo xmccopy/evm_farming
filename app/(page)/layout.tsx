@@ -80,7 +80,7 @@ export default function RootLayout({
                     {isMobileMenuOpen && (
                         // <div className="md:hidden" id="mobile-menu">
                         <div className="" id="mobile-menu">
-                            <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+                            <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 fixed w-[430px] bg-gradient-to-b from-[#0C0D42] to-[#2E1367] z-50">
                                 <a href="#" className="block rounded-md bg-gray-400 px-4 py-2 text-base font-medium text-white" aria-current="page">LOGO</a>
                                 <a href="#" className="block rounded-md px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                                     <div className="flex items-center justify-start gap-4 text-white">
@@ -112,7 +112,7 @@ export default function RootLayout({
                 </nav>
 
                 <main>
-                    <div className="mx-auto max-w-7xl px-6 py-2">
+                    <div className="min-h-custom mx-auto max-w-7xl px-6 py-2">
                         {children}
                     </div>
                 </main>
