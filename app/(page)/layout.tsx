@@ -117,7 +117,7 @@ export default function RootLayout({
                     </div>
                 </main>
 
-                <footer className="pb-[24px] mx-auto flex items-center justify-center">
+                <footer className="pb-[12px] mx-auto flex items-center justify-center">
                     <p className="text-white text-[12px]">© 2024 XXXXXXX. All rights reserved.</p>
                 </footer>
             </div>
