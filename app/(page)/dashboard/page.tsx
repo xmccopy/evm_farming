@@ -24,7 +24,7 @@ export default function Dashboard() {
                 <title>Dashboard</title>
             </Head>
 
-            <div className="m-auto w-64 h-64">
+            <div className="m-auto w-48 h-48">
                 {/* Placeholder for the graphic */}
                 <img
                     src="/images/main.png"

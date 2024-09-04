@@ -29,7 +29,7 @@ export default function Wallet() {
 
             <h1 className="text-3xl font-bold mb-8">EVM ファーミング</h1>
 
-            <Link href="/paypment"
+            <Link href="/payment"
                 className="w-64 py-3 text-center mb-4 text-lg font-semibold bg-[linear-gradient(160deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] hover:bg-[linear-gradient(200deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] rounded-[30px] shadow-md transition-all duration-1000 ease-in-out">
                 ライセンス購入
             </Link>

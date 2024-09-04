@@ -24,7 +24,7 @@ export default function MailCheck() {
                 <title>Dashboard</title>
             </Head>
 
-            <div className="w-52 h-52">
+            <div className="m-auto w-48 h-48">
                 {/* Placeholder for the graphic */}
                 <img
                     src="/images/main.png"
