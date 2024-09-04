@@ -5,6 +5,7 @@ import { IoKeyOutline } from "react-icons/io5";
 import { PiCopy } from "react-icons/pi";
 import { FaEthereum } from "react-icons/fa";
 import { GiTrashCan } from "react-icons/gi";
+import Link from "next/link";
 
 export default function Wallet() {
 
@@ -28,10 +29,10 @@ export default function Wallet() {
 
             <h1 className="text-3xl font-bold mb-8">EVM ファーミング</h1>
 
-            <button
-                className="w-64 py-3 mb-4 text-lg font-semibold bg-[linear-gradient(160deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] hover:bg-[linear-gradient(200deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] rounded-[30px] shadow-md transition-all duration-1000 ease-in-out">
+            <Link href="/payment"
+                className="w-64 py-3 text-center mb-4 text-lg font-semibold bg-[linear-gradient(160deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] hover:bg-[linear-gradient(200deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] rounded-[30px] shadow-md transition-all duration-1000 ease-in-out">
                 ライセンス購入
-            </button>
+            </Link>
 
             <div className="mx-auto w-full bg-[#2F2F8A] bg-opacity-40 text-white rounded-t-md rounded-tr-md pt-8 px-6 pb-5 shadow-lg">
                 <div className="flex items-center justify-between mb-4">
@@ -61,7 +62,7 @@ export default function Wallet() {
             {/* Modal */}
             {isOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-[#2F2F8A] text-white rounded-[30px] p-8 shadow-md max-w-sm w-full space-y-6">
+                    <div className="bg-[#2F2F8A] text-white rounded-[30px] p-8 shadow-md max-w-[430px] bg-opacity-70  w-full space-y-6 backdrop-filter backdrop-blur-[9.23077px]">
                         <h2 className="text-lg font-semibold text-center">
                             ウォレットを本当に削除しますか？
                         </h2>

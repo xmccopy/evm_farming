@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState } from "react";
 import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
+import Link from "next/link";
 
 export default function Home() {
   const [showPassword, setShowPassword] = useState(false);
@@ -19,9 +20,10 @@ export default function Home() {
       </Head>
 
       <div className="text-white rounded-lg max-w-md w-full space-y-6">
-        <h1 className="text-3xl font-bold text-center">SIGN UP</h1>
+        <h1 className="text-[32px] font-bold text-center">SIGN UP</h1>
 
-        <div className="w-64 h-64 m-auto">
+        <div className="m-auto w-48 h-48">
+          {/* Placeholder for the graphic */}
           <img
             src="/images/main.png"
             alt="Sign Up Graphic"
@@ -31,20 +33,20 @@ export default function Home() {
 
         <form className="space-y-6">
           <div>
-            <label className="block">メールアドレス</label>
+            <label className="block pl-2">メールアドレス</label>
             <input
               type="email"
               placeholder="メールアドレス"
-              className="w-full px-4 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
           </div>
 
           <div className="relative">
-            <label className="block">パスワード</label>
+            <label className="block  pl-2">パスワード</label>
             <input
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
-              className="w-full px-4 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
             <button
               type="button"
@@ -56,11 +58,11 @@ export default function Home() {
           </div>
 
           <div>
-            <label className="block">アクティベーションコード</label>
+            <label className="block pl-2">アクティベーションコード</label>
             <input
               type="text"
               placeholder="アクティベーションコード"
-              className="w-full px-4 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
           </div>
 
@@ -73,17 +75,17 @@ export default function Home() {
         </form>
 
         <div className="text-center">
-          <a href="#" className="text-[#D2AB67] underline text-[16px]">
+          <Link href="/signin" className="text-[#D2AB67] underline text-[16px]">
             サインインはこちら
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* Modal Background */}
       {
         isOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-[#2F2F8A] text-white rounded-lg p-8 shadow-md max-w-sm w-full space-y-6">
+          <div className="fixed inset-0 z-50 flex items-center justify-center w-full bg-black bg-opacity-50">
+            <div className="bg-[#2F2F8A] text-white rounded-lg p-8 shadow-md max-w-[430px] w-full space-y-6 bg-opacity-70 backdrop-filter backdrop-blur-[9.23077px]">
               {/* Close Button */}
               <div className="flex justify-end">
                 <button onClick={toggleModal}>
