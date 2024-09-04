@@ -47,12 +47,13 @@ export default function Payment() {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="px-6 pt-3 border-2 border-[#3333a5] rounded-br-[24px] rounded-b-[24px]">
                 <div className="mb-4">
                     <select className="w-full p-6 text-white rounded-lg text-white bg-white bg-opacity-0 rounded-[16px] border-2 border-[#252586]">
                         <option value="tron">TRON(TRC-20)</option>
+                        <option value="tron">BEP(TRC-20)</option>
+                        <option value="tron">ERC(TRC-20)</option>
                     </select>
                 </div>
 

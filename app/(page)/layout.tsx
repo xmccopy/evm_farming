@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import { MdBubbleChart } from "react-icons/md";
-import { FaUserPlus } from "react-icons/fa";
+import { FaEthereum, FaUserPlus } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
-import { FaEthereum } from "react-icons/fa";
 
 export default function RootLayout({
     children,
