@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from "react";
-import { SiHiveBlockchain } from "react-icons/si";
 import { MdBubbleChart } from "react-icons/md";
 import { FaUserPlus } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
+import { FaEthereum } from "react-icons/fa";
 
 export default function RootLayout({
     children,
