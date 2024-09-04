@@ -20,10 +20,10 @@ export default function Home() {
         <title>Sign Up</title>
       </Head>
 
-      <div className=" text-white rounded-lg max-w-md w-full space-y-6">
+      <div className=" text-white dark:text-[#000000] rounded-lg max-w-md w-full space-y-6">
         <h1 className="text-3xl font-bold text-center">SIGN IN</h1>
 
-        <div className="m-auto w-48 h-48">
+        <div className="m-auto w-36 h-36">
           {/* Placeholder for the graphic */}
           <img
             src="/images/main.png"
@@ -38,7 +38,7 @@ export default function Home() {
             <input
               type="email"
               placeholder="メールアドレス"
-              className="w-full px-2 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white dark:border-[3px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
           </div>
 
@@ -47,13 +47,13 @@ export default function Home() {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
-              className="w-full px-2 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white dark:border-[3px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
             <br />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1 transform -translate-y-1/2 text-gray-400" style={{ marginTop: '40px' }}
+              className="absolute right-3 top-[20px] transform -translate-y-1/2 text-gray-400" style={{ marginTop: '40px' }}
             >
               {showPassword ? <RiEyeLine /> : <RiEyeCloseLine />}
             </button>
@@ -68,7 +68,7 @@ export default function Home() {
               className="w-full px-4 py-2 bg-white border border-white rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
           </div> */}
-          <button onClick={handleClick} className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition">
+          <button onClick={handleClick} className="w-full bg-green-500 dark:bg-[#2E1367] text-white py-2 rounded-md hover:bg-green-600 transition">
             サインイン
           </button>
         </form>

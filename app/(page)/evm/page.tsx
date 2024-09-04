@@ -5,7 +5,7 @@ import { RiBarChart2Fill } from "react-icons/ri";
 import { RxCalendar } from "react-icons/rx";
 export default function evm() {
     return (
-        <div className="text-white">
+        <div className="text-white dark:text-[#000000]">
             <div className="flex justify-between items-center pb-18">
                 <FaArrowLeft className="w-[19px]" />
                 <div className="flex gap-3 items-center">
@@ -19,8 +19,8 @@ export default function evm() {
                     <span className="px-3 py-2 bg-[#E5BB01] rounded-full bg-opacity-30 text-[12px]">支払い待ち</span>
                 </div>
             </div>
-            <div className="text-[20px] text-white mb-6">EVMウォレット #1</div>
-            <div className="text-[14px] text-white mb-6 flex gap-2 items-center">
+            <div className="text-[20px] text-white dark:text-[#000000] mb-6">EVMウォレット #1</div>
+            <div className="text-[14px] text-white dark:text-[#000000] mb-6 flex gap-2 items-center">
                 <p>0x9023...529d</p>
                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_181_1293)">
@@ -44,32 +44,32 @@ export default function evm() {
                 </svg>
 
             </div>
-            <div className="w-[381px] h-[285px] mb-13 px-6 py-6 bg-[#2f2f8a]/40 rounded-md border border-[#e5bb01] backdrop-blur-[18.46px] flex-col justify-start items-center gap-2 inline-flex mb-[48px]">
+            <div className="w-[381px] h-[285px] mb-13 px-6 py-6 bg-[#2f2f8a]/40 dark:bg-[#ffffff] rounded-md border border-[#e5bb01] backdrop-blur-[18.46px] flex-col justify-start items-center gap-2 inline-flex mb-[48px]">
                 <div className="flex-col justify-start items-center gap-4 flex">
                     <div className="flex-col justify-start items-center gap-4 flex">
                         <div className="flex-col justify-start items-center gap-4 flex">
-                            <div className="text-[#e5bb01] text-base font-bold font-['Noto Sans JP'] leading-relaxed">エアドロポイント</div>
+                            <div className="text-[#e5bb01]  text-base font-bold font-['Noto Sans JP'] leading-relaxed">エアドロポイント</div>
                             <img src="/images/prise.png" alt="" />
                             <div className="text-[#e5bb01] text-base font-medium font-['Noto Sans JP'] leading-relaxed">1,000 POINT</div>
                         </div>
                         <div className="self-stretch h-3 flex-col justify-end items-end gap-4 flex">
                             <div className="w-[309px] h-3 relative">
-                                <div className="w-[236px] h-[9.17px] left-[2px] top-[1.42px] absolute bg-[#ffb73b]/60 rounded-[18.33px] border border-[#e5bb01]" />
-                                <div className="w-[309px] h-3 left-0 top-0 absolute bg-white/30 rounded-3xl" />
+                                <div className="w-[236px] h-[9.17px] left-[2px] top-[1.42px] absolute bg-[#ffb73b]/60 z-50 rounded-[18.33px] border border-[#e5bb01]" />
+                                <div className="w-[309px] h-3 left-0 top-0 absolute bg-white/30 dark:bg-gray-200 rounded-3xl" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between gap-4 mb-8 text-white">
-                <div className="w-[calc(50%-10px)] flex gap-4 py-4 pl-5 items-center bg-[#2F2F8A] bg-opacity-40 rounded-md border-indigo-800 border-2">
+            <div className="flex justify-between gap-4 mb-8 text-white dark:text-[#000000]">
+                <div className="w-[calc(50%-10px)] flex gap-4 py-4 pl-5 items-center bg-[#2F2F8A] bg-opacity-40 dark:bg-[#ffffff] rounded-md border-indigo-800 border-2">
                     <RiBarChart2Fill className="w-[15px] h-[15px]" />
                     <div>
                         <div className="text-[20px] font-bold">$0</div>
                         <div className="text-[12px]">BASE上のボリューム</div>
                     </div>
                 </div>
-                <div className="w-[calc(50%-10px)] flex gap-4 py-4 pl-5 items-center bg-[#2F2F8A] bg-opacity-40 rounded-md border-indigo-800 border-2">
+                <div className="w-[calc(50%-10px)] flex gap-4 py-4 pl-5 items-center bg-[#2F2F8A] bg-opacity-40 dark:bg-[#ffffff] rounded-md border-indigo-800 border-2">
                     <RxCalendar />
                     <div>
                         <div className="text-[20px] font-bold">0 Days</div>

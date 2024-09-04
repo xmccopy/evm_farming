@@ -13,6 +13,7 @@ const SubTitle: React.FC<SubTitleProps> = ({
                 text-[20px]
                 font-bold
                 text-white
+                dark:text-[#000000]
                 mb-[24px]
                 relative
                 z-30

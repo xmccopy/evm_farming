@@ -40,7 +40,7 @@ export default function Home() {
           {sampleData.length > 0 ? (
             <Table data={sampleData} />
           ) : (
-            <p className="text-left text-white text-[14px] leading-6">フリーミアム ウォレットはまだありません。<br/>
+            <p className="text-left text-white dark:text-[#000000] text-[14px] leading-6">フリーミアム ウォレットはまだありません。<br/>
               まずは作成しましょう。</p>
           )}
         </div>

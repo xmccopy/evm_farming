@@ -13,6 +13,7 @@ const Title: React.FC<TitleProps> = ({
                 text-[32px]
                 font-bold
                 text-white
+                dark:text-[#000000]
                 mb-[48px]
                 relative
                 z-40

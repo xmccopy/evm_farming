@@ -15,8 +15,8 @@ interface Table_IntroProps {
 const Table_Intro: React.FC<Table_IntroProps> = ({ data }) => {
     return (
         <div className="w-full">
-            <table className="min-w-full text-[12px] text-white">
-                <thead className='bg-white bg-opacity-10 w-full'>
+            <table className="min-w-full text-[12px] text-white dark:text-[#000000]">
+                <thead className='bg-white bg-opacity-10 dark:bg-[#2E1367] dark:bg-opacity-10 w-full'>
                     <tr>
                         <th className="py-2 text-left rounded-l-[4px]"></th>
                         <th className="px-3 py-2 text-left">

@@ -19,12 +19,12 @@ export default function Dashboard() {
     };
 
     return (
-        <div className=" flex flex-col items-center justify-start text-white">
+        <div className=" flex flex-col items-center justify-start text-white dark:text-[#000000]">
             <Head>
                 <title>Dashboard</title>
             </Head>
 
-            <div className="m-auto w-48 h-48">
+            <div className="m-auto w-36 h-36">
                 {/* Placeholder for the graphic */}
                 <img
                     src="/images/main.png"

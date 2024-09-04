@@ -9,6 +9,7 @@ import { MdBubbleChart } from "react-icons/md";
 
 import { PiEye } from "react-icons/pi";
 import { PiEyeClosed } from "react-icons/pi";
+import { IoIosBrowsers } from "react-icons/io";
 
 export default function Home() {
     const sampleData = [
@@ -75,14 +76,14 @@ export default function Home() {
             <div>
                 <Title label="紹介" />
                 <div className="flex flex-col gap-[24px] items-center justify-center">
-                    <div className="flex items-center justify-center relative z-20 p-[25px] bg-white">
+                    <div className="flex items-center justify-center relative z-20 p-[25px] bg-white dark:bg-gray-200">
                         <img src="/images/QR.png" alt="QR code" className="position z-30" />
                     </div>
-                    <p className="text-white text-[20px]">紹介リンク</p>
-                    <div className="w-[215px] h-[45px] border-white border-[2px] rounded-[8px] flex items-center justify-center">
+                    <p className="text-white dark:text-[#000000] text-[20px]">紹介リンク</p>
+                    <div className="w-[215px] h-[45px] border-white border-[2px] dark:border-[#2E1367] rounded-[8px] flex items-center justify-center">
                         <div className="flex items-center justify-center gap-[8px]">
-                            <p className="text-[12px] text-white">https://SAMPLE.jp/</p>
-                            <img src="/images/extension.png" alt="extension" />
+                            <p className="text-[12px] text-white dark:text-[#000000]">https://SAMPLE.jp/</p>
+                            <IoIosBrowsers size={20} className="text-white dark:text-[#000000]"/>
                         </div>
                     </div>
                 </div>
@@ -98,11 +99,14 @@ export default function Home() {
                             px-6 
                             py-2
                           bg-[#4036C1] 
+                            dark:bg-[#ffffff]
                             bg-opacity-30
                             text-white
-                            border-[1px]
+                            dark:text-[#000000]
+                            border-[2px]
                             border-[#a7a3e0]
                             border-opacity-10
+                            dark:border-[#2E1367]
                             rounded-[5.5px]
                             mb-[20px]
                         "
@@ -127,9 +131,12 @@ export default function Home() {
                             py-4
                           bg-[#4036C1] 
                             bg-opacity-30
+                            dark:bg-[#ffffff]
                             text-white
-                            border-[1px]
+                            dark:text-[#000000]
+                            border-[2px]
                             border-[#a7a3e0]
+                            dark:border-[#2E1367]
                             border-opacity-10
                             rounded-[5.5px]
                             mb-[48px]
@@ -145,13 +152,13 @@ export default function Home() {
                         <button
                             onClick={handleWithdraw}
                             className="
-                                h-[42px] w-full mt-[16px] px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex
+                                h-[42px]  transition-all duration-1000 ease-in-out hover:ease-out w-full mt-[16px] px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex
                                 "
                         >
                             <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請</div>
                         </button>
                     </div>
-                    <div className="w-[381px] h-[285px] px-6 py-6 bg-[#2f2f8a]/40 rounded-md border border-[#e5bb01] backdrop-blur-[18.46px] flex-col justify-start items-center gap-2 inline-flex mb-[48px]">
+                    <div className="w-[381px] h-[285px] px-6 py-6 bg-[#2f2f8a]/40 dark:bg-[#ffffff] rounded-md border border-[#e5bb01] backdrop-blur-[18.46px] flex-col justify-start items-center gap-2 inline-flex mb-[48px]">
                         <div className="flex-col justify-start items-center gap-4 flex">
                             <div className="flex-col justify-start items-center gap-4 flex">
                                 <div className="flex-col justify-start items-center gap-4 flex">
@@ -161,8 +168,8 @@ export default function Home() {
                                 </div>
                                 <div className="self-stretch h-3 flex-col justify-end items-end gap-4 flex">
                                     <div className="w-[309px] h-3 relative">
-                                        <div className="w-[236px] h-[9.17px] left-[2px] top-[1.42px] absolute bg-[#ffb73b]/60 rounded-[18.33px] border border-[#e5bb01]" />
-                                        <div className="w-[309px] h-3 left-0 top-0 absolute bg-white/30 rounded-3xl" />
+                                        <div className="w-[236px] h-[9.17px] left-[2px] top-[1.42px] absolute z-50 bg-[#ffb73b]/60 rounded-[18.33px] border border-[#e5bb01]" />
+                                        <div className="w-[309px] h-3 left-0 top-0 absolute bg-white/30 dark:bg-gray-200 rounded-3xl" />
                                     </div>
                                 </div>
                             </div>
@@ -223,13 +230,13 @@ export default function Home() {
                                 <div className="flex flex-col justify-center items-center  gap-4">
                                     <button
                                         onClick={handleWithdrawConfirm}
-                                        className="h-[42px] w-full px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex"
+                                        className=" transition-all duration-1000 ease-in-out hover:ease-out h-[42px] w-full px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex"
                                     >
                                         <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請する</div>
                                     </button>
                                     <button
                                         onClick={closeModal}
-                                        className="bg-[#1C1C65] bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                                        className="bg-[#1C1C65] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
                                     >
                                         キャンセル
                                     </button>
@@ -245,7 +252,7 @@ export default function Home() {
                                 <div className="flex justify-end gap-4">
                                     <button
                                         onClick={closeModal}
-                                        className="bg-[#1C1C65] bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                                        className="bg-[#1C1C65] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
                                     >
                                         戻る
                                     </button>

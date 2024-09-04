@@ -27,10 +27,13 @@ const MySetting: React.FC<MySettingProps> = ({
                 px-6 
                 py-2
               bg-[#4036C1] 
+                dark:bg-[#ffffff]
                 bg-opacity-30
                 text-white
-                border-[1px]
+                dark:text-[#000000]
+                border-[2px]
                 border-[#a7a3e0]
+                dark:border-[#2E1367]
                 border-opacity-10
                 rounded-[5.5px]
             "

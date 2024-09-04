@@ -37,6 +37,7 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
                 text-[16px]
                 font-bold
                 text-white
+                dark:text-[#000000]
                 mb-[24px]
             "
             >
@@ -52,10 +53,13 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
                 px-6 
                 py-2
               bg-[#4036C1] 
+                dark:bg-[#ffffff]
                 bg-opacity-30
                 text-white
-                border-[1px]
+                dark:text-[#000000]
+                border-[2px]
                 border-[#a7a3e0]
+                dark:border-[#2E1367]
                 border-opacity-10
                 rounded-[5.5px]
                 mb-[24px]
@@ -80,11 +84,11 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
                         text-[12px]
                         font-bold
                         text-white
-                        border-[1px]
+                        dark:text-[#000000]
+                        border-[2px]
                         border-white
-                        bg-gradient-to-b
-                      from-[#E5BB01] 
-                      to-[#27230f]
+                        dark:border-[#2E1367]
+                        bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out
                         rounded-full
                     "
                 >
@@ -101,10 +105,13 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
                         text-[12px]
                         font-bold
                         text-white
-                        border-[1px]
+                        dark:text-[#000000]
+                        border-[2px]
                         border-white
+                        dark:border-[#2E1367]
                         bg-[#4036C1]
                         bg-opacity-30
+                        shadow-md transition-all duration-1000 ease-in-out hover:ease-out
                         rounded-full
                     "
                 >

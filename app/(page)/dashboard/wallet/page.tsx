@@ -15,13 +15,13 @@ export default function Wallet() {
         setIsOpen(!isOpen);
     };
     return (
-        <div className=" flex flex-col items-center justify-start text-white">
+        <div className=" flex flex-col items-center justify-start text-white dark:text-[#000000]">
 
             <Head>
                 <title>Dashboard</title>
             </Head>
 
-            <div className="m-auto w-64 h-64">
+            <div className="m-auto w-36 h-36">
                 {/* Placeholder for the graphic */}
                 <img src="/images/main.png" alt="Sign Up Graphic" className="w-full h-full" />
             </div>
@@ -34,10 +34,10 @@ export default function Wallet() {
                 ライセンス購入
             </Link>
 
-            <div className="mx-auto w-full bg-[#2F2F8A] bg-opacity-40 text-white rounded-t-md rounded-tr-md pt-8 px-6 pb-5 shadow-lg">
+            <div className="mx-auto w-full bg-[#2F2F8A] bg-opacity-40 text-white dark:text-[#000000] rounded-t-md rounded-tr-md pt-8 px-6 pb-5 shadow-lg">
                 <div className="flex items-center justify-between mb-4">
                     <FaEthereum />
-                    <div className="text-lg font-bold">ウォレット</div>
+                    <div className="text-[16px] font-bold">ウォレット</div>
                     <IoKeyOutline />
                     <span>0x9023...529d</span>
                     <PiCopy />
