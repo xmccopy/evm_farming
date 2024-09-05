@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdBubbleChart } from "react-icons/md";
 import { FaUserPlus } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
@@ -18,15 +18,29 @@ export default function RootLayout({
 }: RootLayoutProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [bgExchange, setBgExchange] = useState(true);
+    const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
-    
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     }
 
-    const toggleBgExchange = () => {
-        setBgExchange(!bgExchange);
-    }
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+                setIsMobileMenuOpen(false);  // Close the menu if clicked outside
+            }
+        };
+
+        if (isMobileMenuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMobileMenuOpen]);
 
     return (
         <>
@@ -83,8 +97,8 @@ export default function RootLayout({
                                     <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Reports</a>
                                 </div>
                             </div> */}
-                               
-                                <DarkModeToggle/>
+
+                                <DarkModeToggle />
                             </div>
 
 
@@ -93,7 +107,7 @@ export default function RootLayout({
 
                     {isMobileMenuOpen && (
                         // <div className="md:hidden" id="mobile-menu">
-                        <div className="" id="mobile-menu">
+                        <div ref={mobileMenuRef} id="mobile-menu">
                             <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 fixed w-[430px] bg-gradient-to-b from-[#0C0D42] to-[#2E1367] dark:bg-gradient-to-b dark:from-[#ffffff] dark:to-[#e7dcff] z-50">
                                 <a href="#" className="block rounded-md bg-gray-400 text-white dark:bg-gray-400 px-4 py-2 text-base font-medium" aria-current="page">LOGO</a>
                                 <a href="/dashboard" className="block rounded-md px-4 py-2 text-base font-medium  text-gray-300 hover:bg-gray-700 hover:text-white dark:hover:bg-gray-300 dark:over:text-[#ffffff]">

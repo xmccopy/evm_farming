@@ -178,8 +178,8 @@ export default function Home() {
                     <SubTitle label="紹介者一覧" />
                     <Table_Intro data={sampleData} />
                     {isOpenWithdraw && (
-                        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-40">
-                            <div className="bg-[#2F2F8A] bg-opacity-90 p-6 rounded-md text-white w-[425px]">
+                        <div className="fixed inset-0 bg-black border-2 border-[#2F2F8A]  bg-opacity-60 flex items-center justify-center z-40">
+                            <div className="bg-[#2F2F8A] bg-opacity-90 p-6 rounded-md dark:text-black dark:bg-white text-white w-[425px]">
                                 <h2 className="text-[20px] font-bold text-center mb-[6px]">送金先アドレス</h2>
                                 <div className="flex items-center justify-center gap-[16px] mb-[24px]">
                                     <p className="text-[16px] font-bold text-center">出金可能額</p>
@@ -187,30 +187,30 @@ export default function Home() {
                                 </div>
 
                                 <div className="flex flex-col items-start justify-center gap-[20px] mb-[40px]">
-                                    <p className="text-[16px] font-bold text-white">アドレス</p>
-                                    <input type="text" className="w-[340px] h-8 pl-2 pr-1.5 py-2.5 bg-white/30 rounded-[5px] shadow border border-white backdrop-blur-[20px]" />
-                                    <p className="text-[16px] font-bold text-white">チェーン (USDT)</p>
-                                    <div className="flex items-center justify-start gap-[48px]">
+                                    <p className="text-[16px] font-bold text-white dark:text-black">アドレス</p>
+                                    <input type="text" className="w-[340px] h-8 pl-2 pr-1.5 py-2.5 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]" />
+                                    <p className="text-[16px] font-bold text-white dark:text-black">チェーン (USDT)</p>
+                                    <div className="flex items-center text-white dark:text-black justify-start gap-[48px]">
                                         <div className="flex items-center justify-center gap-[12px]">
                                             <input type="radio" name="chain" className="w-[24px] h-[24px]" />
-                                            <p className="text-[12px] text-white">ERC</p>
+                                            <p className="text-[12px]">ERC</p>
                                         </div>
                                         <div className="flex items-center justify-center gap-[12px]">
                                             <input type="radio" name="chain" className="w-[24px] h-[24px]" />
-                                            <p className="text-[12px] text-white">TRC</p>
+                                            <p className="text-[12px]">TRC</p>
                                         </div>
                                         <div className="flex items-center justify-center gap-[12px]">
                                             <input type="radio" name="chain" className="w-[24px] h-[24px]" />
-                                            <p className="text-[12px] text-white">BEP</p>
+                                            <p className="text-[12px]">BEP</p>
                                         </div>
                                     </div>
-                                    <p className="text-[16px] font-bold text-white">出金額</p>
-                                    <input type="text" className="w-[340px] h-8 pl-2 pr-1.5 py-2.5 bg-white/30 rounded-[5px] shadow border border-white backdrop-blur-[20px]" />
-                                    <p className="text-[16px] font-bold text-white">パスワード</p>
+                                    <p className="text-[16px] font-bold text-white dark:text-black">出金額</p>
+                                    <input type="text" className="w-[340px] h-8 pl-2 pr-1.5 py-2.5 dark:border-[#2F2F8A] dark:bg-white bg-white/30 rounded-[5px] shadow border border-white backdrop-blur-[20px]" />
+                                    <p className="text-[16px] font-bold text-white dark:text-black">パスワード</p>
                                     <div className="relative">
                                         <input
                                             type={passwordVisible ? "text" : "password"}
-                                            className="w-[340px] h-8 pl-2 pr-1.5 py-2.5 bg-white/30 rounded-[5px] shadow border border-white backdrop-blur-[20px]"
+                                            className="w-[340px] h-8 pl-2 pr-1.5 py-2.5 dark:border-[#2F2F8A] dark:bg-white bg-white/30 rounded-[5px] shadow border border-white backdrop-blur-[20px]"
                                         />
                                         {passwordVisible ? (
                                             <PiEye
@@ -230,13 +230,13 @@ export default function Home() {
                                 <div className="flex flex-col justify-center items-center  gap-4">
                                     <button
                                         onClick={handleWithdrawConfirm}
-                                        className=" transition-all duration-1000 ease-in-out hover:ease-out h-[42px] w-full px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex"
+                                        className=" transition-all duration-1000 dark:border-[#2f2f8a] ease-in-out hover:ease-out h-[42px] w-full px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex"
                                     >
-                                        <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請する</div>
+                                        <div className="text-center text-white dark:text-black text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請する</div>
                                     </button>
                                     <button
                                         onClick={closeModal}
-                                        className="bg-[#1C1C65] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                                        className="bg-[#1C1C65] dark:border-[#2f2f8a] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white dark:text-black font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
                                     >
                                         キャンセル
                                     </button>
@@ -247,12 +247,12 @@ export default function Home() {
 
                     {isOpenConfirm && (
                         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-40">
-                            <div className="bg-[#2F2F8A] bg-opacity-90 p-6 rounded-md text-white w-[425px]">
+                            <div className="bg-[#2F2F8A] bg-opacity-90 p-6 rounded-md text-white dark:text-black w-[425px] dark:bg-white dark:border-2 dark:border-[#2f2f8a]">
                                 <h2 className="text-[20px] font-bold mb-[48px]">出金が完了しました。</h2>
                                 <div className="flex justify-end gap-4">
                                     <button
                                         onClick={closeModal}
-                                        className="bg-[#1C1C65] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                                        className="bg-[#1C1C65] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white dark:text-black dark:border-[#2f2f8a] font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
                                     >
                                         戻る
                                     </button>

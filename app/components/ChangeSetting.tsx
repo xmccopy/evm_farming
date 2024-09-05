@@ -120,12 +120,12 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
             </div>
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-60 flex items-start pt-[150px] justify-center z-40">
-                    <div className="bg-[#2F2F8A] bg-opacity-80 p-6 rounded-md text-white w-[400px]">
+                    <div className="bg-[#2F2F8A]  bg-opacity-80 p-6 rounded-md text-white w-[425px] dark:bg-white dark:border-2 dark:border-[#2f2f8a] dark:text-black">
                         <h2 className="text-[20px] font-bold mb-[48px]">{resultConfirm}</h2>
                         <div className="flex justify-end gap-4">
                             <button
                                 onClick={closeModal}
-                                className="bg-[#1C1C65] bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                                className="bg-[#1C1C65] dark:text-black dark:border-[#2f2f8a] bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
                             >
                                 戻る
                             </button>

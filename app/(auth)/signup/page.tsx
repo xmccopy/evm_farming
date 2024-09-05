@@ -37,7 +37,7 @@ export default function Home() {
             <input
               type="email"
               placeholder="メールアドレス"
-              className="w-full px-2 py-2 bg-white  border-white dark:border-[3px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white  border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
           </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
-              className="w-full px-2 py-2 bg-white border border-white dark:border-[3px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
             <button
               type="button"
@@ -62,7 +62,7 @@ export default function Home() {
             <input
               type="text"
               placeholder="アクティベーションコード"
-              className="w-full px-2 py-2 bg-white border border-white dark:border-[3px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 py-2 bg-white border border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
           </div>
 
@@ -85,11 +85,11 @@ export default function Home() {
       {
         isOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center w-full bg-black bg-opacity-50">
-            <div className="bg-[#2F2F8A] text-white rounded-lg p-8 shadow-md max-w-[430px] w-full space-y-6 bg-opacity-70 backdrop-filter backdrop-blur-[9.23077px]">
+            <div className="bg-[#2F2F8A] text-white border-2 border-[#2F2F8A] dark:bg-[#ffffff] dark:text-[#000000] rounded-lg p-8 shadow-md max-w-[430px] w-full space-y-6 bg-opacity-70 backdrop-filter backdrop-blur-[9.23077px]">
               {/* Close Button */}
               <div className="flex justify-end">
                 <button onClick={toggleModal}>
-                  <AiOutlineClose className="text-white text-2xl" />
+                  <AiOutlineClose className="text-white text-2xl dark:text-[#000000]" />
                 </button>
               </div>
 
@@ -98,7 +98,7 @@ export default function Home() {
                 <h2 className="text-xl font-bold mb-4">
                   仮登録が完了しました。 <br /> メールをご確認ください。
                 </h2>
-                <p className="text-sm text-gray-300 mb-6">
+                <p className="text-sm text-gray-300 mb-6 dark:text-gray-700">
                   ご登録のメールアドレスに本登録メールを送信しました。メールに記載されているURLから本登録を完了してください。
                 </p>
               </div>

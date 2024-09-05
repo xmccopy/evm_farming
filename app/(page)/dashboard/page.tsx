@@ -50,8 +50,8 @@ export default function Dashboard() {
 
             {isOpen && (
                 <div className="fixed inset-0 flex justify-center items-center  bg-black bg-opacity-50 z-50">
-                    <div className="bg-[#2F2F8A] backdrop-filter backdrop-blur-md bg-opacity-70  p-6 rounded-[32px] shadow-md max-w-[430px] w-full">
-                        <h2 className="text-white text-[20px] mb-4">EVMウォレットをインポートする</h2>
+                    <div className="bg-[#2F2F8A] border-2 border-[#2F2F8A] dark:bg-[#ffffff] backdrop-filter backdrop-blur-md bg-opacity-70  p-6 rounded-[32px] shadow-md max-w-[430px] w-full">
+                        <h2 className="text-white dark:text-[#000000] text-[20px] mb-4">EVMウォレットをインポートする</h2>
                         <p className="mb-12 text-[14px] leading-relaxed">
                             既存のウォレットでファームするには、<br />
                             その
@@ -59,14 +59,14 @@ export default function Dashboard() {
                                 秘密鍵をインポートすることができます<FiExternalLink className="w-[10px] h-[10px] inline -top-1 relative" />
                             </a>
                         </p>
-                        <label className="text-white block mb-5 text-[16px] font-bold">プライベートキー</label>
+                        <label className="text-white dark:text-[#000000] block mb-5 text-[16px] font-bold">プライベートキー</label>
                         <textarea
                             placeholder="ここにプライベートキーを入力してください"
                             value={privateKey}
                             onChange={(e) => setPrivateKey(e.target.value)}
-                            className="w-full p-3 h-20 rounded-lg mb-5 text-[12px] bg-gray-300 text-white placeholder-gray-400 focus:outline-none"
+                            className="w-full p-3 h-20 rounded-lg mb-5 text-[12px] bg-gray-300 dark:bg-white dark:border-2 dark:border-[#2F2F8A] text-white dark:text-[#000000] placeholder-gray-400 focus:outline-none"
                         />
-                        <p className="text-gray-400 text-sm mb-20 text-[12px]">
+                        <p className="text-gray-400 dark:text-gray-700 text-sm mb-20 text-[12px]">
                             ウォレットのインポートはプレミアムプランの機能であり、
                             ウォレット1つあたり月額25ドルの料金がかかります。
                         </p>
