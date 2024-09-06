@@ -37,7 +37,7 @@ export default function Home() {
             <input
               type="email"
               placeholder="メールアドレス"
-              className="w-full px-2 py-2 bg-white  border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
             />
           </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
-              className="w-full px-2 py-2 bg-white border border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
             />
             <button
               type="button"
@@ -62,7 +62,7 @@ export default function Home() {
             <input
               type="text"
               placeholder="アクティベーションコード"
-              className="w-full px-2 py-2 bg-white border border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
             />
           </div>
 

@@ -35,11 +35,7 @@ export default function Home() {
         <form className="space-y-6">
           <div>
             <div className="px-2">メールアドレス</div>
-            <input
-              type="email"
-              placeholder="メールアドレス"
-              className="w-full px-2 py-2 bg-white border border-white dark:border-[3px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
-            />
+            <input type="email"  placeholder="メールアドレス" className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]" />
           </div>
 
           <div className="relative">
@@ -47,13 +43,13 @@ export default function Home() {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
-              className="w-full px-2 py-2 bg-white border border-white dark:border-[3px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
             />
             <br />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-[20px] transform -translate-y-1/2 text-gray-400" style={{ marginTop: '40px' }}
+              className="absolute right-3 top-[13px] transform -translate-y-1/2 text-gray-400" style={{ marginTop: '40px' }}
             >
               {showPassword ? <RiEyeLine /> : <RiEyeCloseLine />}
             </button>
