@@ -72,13 +72,13 @@ export default function Dashboard() {
                         </p>
                         <button
                             onClick={() => { handleImport(); toggleModal(); }}
-                            className="w-full py-3 rounded-full mb-5 text-white bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600"
+                            className="w-full py-2 rounded-full mb-5 text-white bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600"
                         >
                             ウォレットをインポート
                         </button>
                         <button onClick={toggleModal}
-                            className="w-full py-3 rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-indigo-900"
-                        >
+                            className="w-full py-2 rounded-full text-white bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out"
+                            >
                             キャンセル
                         </button>
                     </div>
