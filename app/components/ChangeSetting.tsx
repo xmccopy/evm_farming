@@ -75,47 +75,14 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
             <div className="flex items-center justify-around gap-[12px]">
                 <button
                     onClick={handleOnChange}
-                    className="
-                        w-[155px]
-                        h-[32px]
-                        flex
-                        items-center
-                        justify-center
-                        text-[12px]
-                        font-bold
-                        text-white
-                        dark:text-[#000000]
-                        border-[2px]
-                        border-white
-                        dark:border-[#2E1367]
-                        bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out
-                        rounded-full
-                    "
+                    className="w-full py-2 rounded-full text-white bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600"
                 >
-                    変更
+                    <div className="text-center  text-sm font-bold font-['Noto Sans JP'] leading-tight">変更</div>
                 </button>
-                <button
-                    onClick={handleOnCancel}
-                    className="
-                        w-[155px]
-                        h-[32px]
-                        flex
-                        items-center
-                        justify-center
-                        text-[12px]
-                        font-bold
-                        text-white
-                        dark:text-[#000000]
-                        border-[2px]
-                        border-white
-                        dark:border-[#2E1367]
-                        bg-[#4036C1]
-                        bg-opacity-30
-                        shadow-md transition-all duration-1000 ease-in-out hover:ease-out
-                        rounded-full
-                    "
+                <button onClick={handleOnCancel}
+                    className="w-full py-2 rounded-full text-white bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out"
                 >
-                    キャンセル
+                    <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">キャンセル</div>
                 </button>
             </div>
             {isModalOpen && (
@@ -123,11 +90,10 @@ const ChangeSetting: React.FC<ChangeSettingProps> = ({
                     <div className="bg-[#2F2F8A]  bg-opacity-80 p-6 rounded-md text-white w-[425px] dark:bg-white dark:border-2 dark:border-[#2f2f8a] dark:text-black">
                         <h2 className="text-[20px] font-bold mb-[48px]">{resultConfirm}</h2>
                         <div className="flex justify-end gap-4">
-                            <button
-                                onClick={closeModal}
-                                className="bg-[#1C1C65] dark:text-black dark:border-[#2f2f8a] bg-opacity-50 text-white font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                            <button onClick={closeModal}
+                                className="w-full py-2 rounded-full text-white bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out"
                             >
-                                戻る
+                                <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">戻る</div>
                             </button>
                         </div>
                     </div>

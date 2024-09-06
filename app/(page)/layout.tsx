@@ -32,13 +32,13 @@ export default function RootLayout({
         };
 
         if (isMobileMenuOpen) {
-            document.addEventListener("mousedown", handleClickOutside);
+            document.addEventListener("click", handleClickOutside);
         } else {
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("click", handleClickOutside);
         }
 
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("click", handleClickOutside);
         };
     }, [isMobileMenuOpen]);
 
@@ -81,11 +81,11 @@ export default function RootLayout({
                                 </button>
                             </div>
 
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 cursor-pointer">
                                 <div className="flex items-center justify-center border-white dark:border-[#2E1367] rounded-full w-[175px] h-[32px] border-[1px]">
                                     <div className="flex items-center justify-center gap-[16px]">
                                         <img src="/images/signin.png" alt="signin_icon" />
-                                        <a href="/signin"><p className="text-white dark:text-[#000000] text-[14px] cursor-pointer">SIGN IN</p></a>
+                                        <a href="/signin"><p className="text-white dark:text-[#000000] text-[14px] ">SIGN IN</p></a>
                                     </div>
                                 </div>
                                 {/* <div className="hidden md:block">

@@ -83,7 +83,7 @@ export default function Home() {
                     <div className="w-[215px] h-[45px] border-white border-[2px] dark:border-[#2E1367] rounded-[8px] flex items-center justify-center">
                         <div className="flex items-center justify-center gap-[8px]">
                             <p className="text-[12px] text-white dark:text-[#000000]">https://SAMPLE.jp/</p>
-                            <IoIosBrowsers size={20} className="text-white dark:text-[#000000]"/>
+                            <IoIosBrowsers size={20} className="text-white dark:text-[#000000]" />
                         </div>
                     </div>
                 </div>
@@ -149,13 +149,9 @@ export default function Home() {
                                 <p className="text-[12px]">紹介報酬</p>
                             </div>
                         </div>
-                        <button
-                            onClick={handleWithdraw}
-                            className="
-                                h-[42px]  transition-all duration-1000 ease-in-out hover:ease-out w-full mt-[16px] px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex
-                                "
-                        >
-                            <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請</div>
+
+                        <button onClick={handleWithdraw} className="w-full h-[42px] px-8 py-4 text-[14px] mt-[16px] flex items-center justify-center font-semibold bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] rounded-[30px] shadow-md transition-all duration-1000 ease-in-out hover:ease-out">
+                            <div className="text-center text-white  text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請</div>
                         </button>
                     </div>
                     <div className="w-[381px] h-[285px] px-6 py-6 bg-[#2f2f8a]/40 dark:bg-[#ffffff] rounded-md border border-[#e5bb01] backdrop-blur-[18.46px] flex-col justify-start items-center gap-2 inline-flex mb-[48px]">
@@ -227,18 +223,17 @@ export default function Home() {
 
                                 </div>
 
-                                <div className="flex flex-col justify-center items-center  gap-4">
+                                <div className="flex flex-col justify-center items-center">
                                     <button
                                         onClick={handleWithdrawConfirm}
-                                        className=" transition-all duration-1000 dark:border-[#2f2f8a] ease-in-out hover:ease-out h-[42px] w-full px-8 py-4 bg-gradient-to-tl from-[#665dcd] via-[#5fa4e6] to-[#d2ab67] rounded-[30px] shadow border border-white justify-center items-center gap-4 inline-flex"
+                                        className="w-full py-3 rounded-full mb-5 text-white bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600"
                                     >
-                                        <div className="text-center text-white dark:text-black text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請する</div>
+                                        <div className="text-center  text-sm font-bold font-['Noto Sans JP'] leading-tight">出金申請する</div>
                                     </button>
-                                    <button
-                                        onClick={closeModal}
-                                        className="bg-[#1C1C65] dark:border-[#2f2f8a] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white dark:text-black font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                                    <button onClick={closeModal}
+                                        className="w-full py-3 rounded-full text-white bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out"
                                     >
-                                        キャンセル
+                                        <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">キャンセル</div>
                                     </button>
                                 </div>
                             </div>
@@ -250,11 +245,10 @@ export default function Home() {
                             <div className="bg-[#2F2F8A] bg-opacity-90 p-6 rounded-md text-white dark:text-black w-[425px] dark:bg-white dark:border-2 dark:border-[#2f2f8a]">
                                 <h2 className="text-[20px] font-bold mb-[48px]">出金が完了しました。</h2>
                                 <div className="flex justify-end gap-4">
-                                    <button
-                                        onClick={closeModal}
-                                        className="bg-[#1C1C65] shadow-md transition-all duration-1000 ease-in-out hover:ease-out bg-opacity-50 text-white dark:text-black dark:border-[#2f2f8a] font-bold w-full h-[42px] border-[1px] border-white rounded-full text-[14px]"
+                                    <button onClick={closeModal}
+                                        className="w-full py-3 rounded-full text-white bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out"
                                     >
-                                        戻る
+                                        <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">戻る</div>
                                     </button>
                                 </div>
                             </div>

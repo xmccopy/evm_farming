@@ -36,11 +36,11 @@ export default function MailCheck() {
             <h1 className="text-3xl font-bold mb-8">EVM ファーミング</h1>
 
             <Link href="/payment" className="text-center w-64 py-3 mb-4 text-[14px] font-semibold bg-[linear-gradient(160deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] hover:bg-[linear-gradient(200deg,_#665DCD_0%,_#5FA4E6_44.76%,_#D2AB67_100%)] rounded-[30px] shadow-md transition-all duration-1000 ease-in-out">
-                ライセンス購入
+                <div className="text-center text-white  text-sm font-bold font-['Noto Sans JP'] leading-tight">ライセンス購入</div>
             </Link>
 
             <button onClick={toggleModal} className="w-64 py-3 text-[14px] mb-12 font-semibold bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] rounded-[30px] shadow-md transition-all duration-1000 ease-in-out hover:ease-out">
-                + ウォレットをインポート
+                <div className="text-center text-white  text-sm font-bold font-['Noto Sans JP'] leading-tight">+ ウォレットをインポート</div>
             </button>
 
             <div className='flex gap-3 rounded-lg mb-12 w-full py-5 px-4 bg-[#D50101] bg-opacity-35 backdrop-filter backdrop-blur-[9.23077px]'>
@@ -80,12 +80,12 @@ export default function MailCheck() {
                             onClick={() => { handleImport(); toggleModal(); }}
                             className="w-full py-3 rounded-full mb-5 text-white bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600"
                         >
-                            ウォレットをインポート
+                            <div className="text-center  text-sm font-bold font-['Noto Sans JP'] leading-tight">ウォレットをインポート</div>
                         </button>
                         <button onClick={toggleModal}
-                            className="w-full py-3 rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-indigo-900"
+                            className="w-full py-3 rounded-full text-white bg-[linear-gradient(107.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] hover:bg-[linear-gradient(200.21deg,_#9348A2_24.43%,_#2954A3_68.95%)] shadow-md transition-all duration-1000 ease-in-out hover:ease-out"
                         >
-                            キャンセル
+                            <div className="text-center text-white text-sm font-bold font-['Noto Sans JP'] leading-tight">キャンセル</div>
                         </button>
                     </div>
                 </div>
