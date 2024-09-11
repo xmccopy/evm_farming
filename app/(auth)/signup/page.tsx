@@ -8,9 +8,33 @@ import Link from "next/link";
 export default function Home() {
   const [showPassword, setShowPassword] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [activationCode, setActivationCode] = useState("");
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleSignup = async () => {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+        activationCode,
+      }),
+    });
+
+    if (response.ok) {
+      toggleModal();
+    } else {
+      // Handle error
+      console.error("Signup failed");
+    }
   };
 
   return (
@@ -31,13 +55,15 @@ export default function Home() {
           />
         </div>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); handleSignup(); }}>
           <div>
             <label className="text-white dark:text-[#000000] block pl-2">メールアドレス</label>
             <input
               type="email"
               placeholder="メールアドレス"
-              className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
+              className="w-full px-2 py-2 bg-white  border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
@@ -46,7 +72,9 @@ export default function Home() {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
-              className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
+              className="w-full px-2 py-2 bg-white border border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <button
               type="button"
@@ -62,13 +90,14 @@ export default function Home() {
             <input
               type="text"
               placeholder="アクティベーションコード"
-              className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
+              className="w-full px-2 py-2 bg-white border border-white dark:border-[1px] dark:border-[#2E1367] rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:border-green-400"
+              value={activationCode}
+              onChange={(e) => setActivationCode(e.target.value)}
             />
           </div>
 
           <button
-            type="button"
-            onClick={toggleModal}
+            type="submit"
             className="w-full bg-green-500 dark:bg-[#2E1367] text-white py-2 mt-[40px] rounded-md hover:bg-green-600 transition" style={{ marginTop: '40px' }}>
             新規登録
           </button>
