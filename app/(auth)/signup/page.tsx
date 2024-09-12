@@ -8,8 +8,10 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import ApiService from "@/utils/ApiService";
+import { useAuth } from "@/app/components/AuthContext";
 
 export default function Home() {
+  const {setUser} = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState<string>("");
@@ -32,6 +34,7 @@ export default function Home() {
     try {
       const response = await apiService.register(email, password, activationCode);
       console.log(response.data);
+      // localStorage.setItem('user', user.email)
       toggleModal();
     } catch(error) {
       console.log('signup error', error)

@@ -2,6 +2,7 @@ import FaviconUpdater from './components/FaviconUpdater'; // Import the client c
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
+import { AuthProvider } from './components/AuthContext';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({
       </head>
       <body>
         <FaviconUpdater />  {/* Include the client-side logic */}
+        <AuthProvider>
         {children}
+        </AuthProvider>
       </body>
     </html>
   );

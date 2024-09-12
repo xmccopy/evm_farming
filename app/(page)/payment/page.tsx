@@ -1,3 +1,5 @@
+'use client'
+
 import withAuth from '@/app/components/withAuth';
 import React from 'react';
 import { BsFillQuestionCircleFill } from "react-icons/bs";

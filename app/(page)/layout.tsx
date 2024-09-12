@@ -141,7 +141,7 @@ export default function RootLayout({
 
                 <main>
                     <div className="min-h-custom mx-auto max-w-7xl px-6 py-2">
-                        {children}
+                            {children}
                     </div>
                 </main>
 
