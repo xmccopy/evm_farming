@@ -6,8 +6,9 @@ import { PiCopy } from "react-icons/pi";
 import { FaEthereum } from "react-icons/fa";
 import { GiTrashCan } from "react-icons/gi";
 import Link from "next/link";
+import withAuth from "@/app/components/withAuth";
 
-export default function Wallet() {
+const Wallet = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -91,3 +92,5 @@ export default function Wallet() {
         </div>
     );
 }
+
+export default withAuth(Wallet)

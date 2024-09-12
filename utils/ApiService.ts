@@ -10,6 +10,15 @@ interface RegisterResponse {
   token: string;
 }
 
+interface LoginResponse {
+  user: {
+    id: string;
+    email: string;
+    password: string;
+  };
+  token: string;
+}
+
 class ApiService {
   private api: AxiosInstance;
 
@@ -29,6 +38,10 @@ class ApiService {
 
   async register(email: string, password: string, activationCode: string): Promise<AxiosResponse<RegisterResponse>> {
     return this.api.post<RegisterResponse>('/auth/register', { email, password, activationCode });
+  }
+
+  async login(email: string, password: string): Promise<AxiosResponse<LoginResponse>> {
+    return this.api.post<LoginResponse>('/auth/login', { email, password});
   }
 }
 

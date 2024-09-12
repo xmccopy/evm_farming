@@ -1,7 +1,8 @@
 import ChangeSetting from "@/app/components/ChangeSetting"
 import Title from "@/app/components/Title"
+import withAuth from "@/app/components/withAuth"
 
-export default function Home() {
+const Home = () => {
     return (
         <>
             <div>
@@ -11,3 +12,5 @@ export default function Home() {
         </>
     )
 }
+
+export default withAuth(Home);

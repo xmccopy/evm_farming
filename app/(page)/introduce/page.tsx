@@ -10,8 +10,9 @@ import { MdBubbleChart } from "react-icons/md";
 import { PiEye } from "react-icons/pi";
 import { PiEyeClosed } from "react-icons/pi";
 import { IoIosBrowsers } from "react-icons/io";
+import withAuth from "@/app/components/withAuth";
 
-export default function Home() {
+const Home = () => {
     const sampleData = [
         {
             id: 1,
@@ -259,3 +260,5 @@ export default function Home() {
         </>
     )
 }
+
+export default withAuth(Home);

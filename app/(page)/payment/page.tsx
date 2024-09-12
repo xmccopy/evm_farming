@@ -1,9 +1,10 @@
+import withAuth from '@/app/components/withAuth';
 import React from 'react';
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { PiCopy } from "react-icons/pi";
 import { SiWalletconnect } from "react-icons/si";
 
-export default function Payment() {
+const Payment = () => {
     return (
         <div className="mx-auto  text-white dark:text-[#000000] rounded-[24px] w-full shadow-lg">
             <div className='bg-[#2F2F8A] bg-opacity-80 w-full p-6 rounded-t-[24px] border-2 border-[#3333a5] rounded-tr-[24px]'>
@@ -84,3 +85,5 @@ export default function Payment() {
     );
 };
 
+
+export default withAuth(Payment)

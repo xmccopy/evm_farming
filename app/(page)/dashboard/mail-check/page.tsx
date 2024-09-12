@@ -4,8 +4,9 @@ import Head from 'next/head';
 import { IoWarningOutline } from "react-icons/io5";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
+import withAuth from "@/app/components/withAuth";
 
-export default function MailCheck() {
+const MailCheck = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [privateKey, setPrivateKey] = useState('');
 
@@ -93,3 +94,5 @@ export default function MailCheck() {
         </div>
     );
 }
+
+export default withAuth(MailCheck)

@@ -1,9 +1,11 @@
 "use client"
+import withAuth from "@/app/components/withAuth";
 import { FaArrowLeft } from "react-icons/fa";
 import { IoKeyOutline, IoWarningOutline } from "react-icons/io5";
 import { RiBarChart2Fill } from "react-icons/ri";
 import { RxCalendar } from "react-icons/rx";
-export default function evm() {
+
+const evm = () => {
     return (
         <div className="text-white dark:text-[#000000]">
             <div className="flex justify-between items-center pb-18">
@@ -150,3 +152,5 @@ export default function evm() {
         </div>
     )
 }
+
+export default withAuth(evm);

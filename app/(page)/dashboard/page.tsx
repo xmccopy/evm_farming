@@ -1,10 +1,21 @@
 "use client";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { FiExternalLink } from "react-icons/fi";
+import { useRouter } from "next/navigation";
+import withAuth from "@/app/components/withAuth";
 
-export default function Dashboard() {
+const Dashboard = () => {
+    const router = useRouter();
+
+    useEffect (() => {
+        const storedToken = localStorage.getItem('token');
+        if(!storedToken) {
+            router.push('signin');
+        }
+    }, [])
 
     const [isOpen, setIsOpen] = useState(false);
     const [privateKey, setPrivateKey] = useState('');
@@ -87,3 +98,7 @@ export default function Dashboard() {
         </div>
     );
 }
+
+export default withAuth(Dashboard);
+
+

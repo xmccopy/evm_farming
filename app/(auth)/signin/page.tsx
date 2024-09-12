@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState } from 'react';
 import { RiEyeCloseLine, RiEyeLine } from 'react-icons/ri';
 import { useRouter } from 'next/navigation';
+import ApiService from "@/utils/ApiService";
 
 export default function Home() {
 
@@ -11,20 +12,16 @@ export default function Home() {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  const handleClick = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
+  const apiService = new ApiService(process.env.NEXT_PIBLIC_BAKEND_URL || "http://192.168.136.127:8000");
 
-    if (response.ok) {
+  const handleSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await apiService.login(email, password);
+      localStorage.setItem("token", response.data?.token);
       router.push('/dashboard');
-    } else {
-      alert('サインインに失敗しました。');
+    } catch(error) {
+      console.log('singin error', error)
     }
   };
 
@@ -46,7 +43,7 @@ export default function Home() {
           />
         </div>
 
-        <form className="space-y-6" onSubmit={handleClick}>
+        <form className="space-y-6" onSubmit={handleSignIn}>
           <div>
             <div className="px-2">メールアドレス</div>
             <input

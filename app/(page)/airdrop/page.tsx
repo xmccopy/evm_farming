@@ -1,7 +1,8 @@
 import Table from "@/app/components/Table"
 import Title from "@/app/components/Title"
+import withAuth from "@/app/components/withAuth"
 
-export default function Home() {
+const Home = () => {
   const sampleData = [
     {
       id: 1,
@@ -48,3 +49,5 @@ export default function Home() {
     </>
   )
 }
+
+export default withAuth(Home);

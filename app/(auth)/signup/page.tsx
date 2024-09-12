@@ -14,14 +14,18 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [activationCode, setActivationCode] = useState<string>("809378");
+  const [activationCode, setActivationCode] = useState<string>("");
   const router = useRouter();
 
-  const apiService = new ApiService(process.env.NEXT_PIBLIC_BAKEND_URL || "http://192.168.136.127:8000");
+  const apiService = new ApiService(process.env.NEXT_PUBLIC_BACKEND_URL || "http://192.168.136.127:8000");
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
+
+  const toggleLogin = () => {
+    router.push("/signin");
+  }
 
   const handleSignUp = async(e: React.FormEvent) => {
     e.preventDefault();
@@ -101,7 +105,7 @@ export default function Home() {
         </form>
 
         <div className="text-center">
-          <Link href="/signin" className="text-[#D2AB67] underline text-[16px]">
+          <Link href="#" className="text-[#D2AB67] underline text-[16px]">
             サインインはこちら
           </Link>
         </div>
@@ -114,7 +118,7 @@ export default function Home() {
             <div className="bg-[#2F2F8A] text-white border-2 border-[#2F2F8A] dark:bg-[#ffffff] dark:text-[#000000] rounded-lg p-8 shadow-md max-w-[430px] w-full space-y-6 bg-opacity-70 backdrop-filter backdrop-blur-[9.23077px]">
               {/* Close Button */}
               <div className="flex justify-end">
-                <button onClick={toggleModal}>
+                <button onClick={toggleLogin}>
                   <AiOutlineClose className="text-white text-2xl dark:text-[#000000]" />
                 </button>
               </div>
@@ -132,7 +136,7 @@ export default function Home() {
               {/* Button */}
               <div className="flex justify-center">
                 <button
-                  onClick={toggleModal}
+                  onClick={toggleLogin}
                   className="px-6 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition"
                 >
                   戻る
