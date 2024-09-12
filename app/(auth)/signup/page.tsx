@@ -1,17 +1,38 @@
 "use client";
+
 import Head from "next/head";
 import { useState } from "react";
 import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import ApiService from "@/utils/ApiService";
 
 export default function Home() {
   const [showPassword, setShowPassword] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [activationCode, setActivationCode] = useState<string>("809378");
+  const router = useRouter();
+
+  const apiService = new ApiService(process.env.NEXT_PIBLIC_BAKEND_URL || "http://192.168.136.127:8000");
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleSignUp = async(e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await apiService.register(email, password, activationCode);
+      console.log(response.data);
+      toggleModal();
+    } catch(error) {
+      console.log('signup error', error)
+    }
+  }
 
   return (
     <div className="flex flex-col items-center justify-start bg-gradient-to-b">
@@ -31,13 +52,15 @@ export default function Home() {
           />
         </div>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSignUp}>
           <div>
             <label className="text-white dark:text-[#000000] block pl-2">メールアドレス</label>
             <input
               type="email"
               placeholder="メールアドレス"
               className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
@@ -47,6 +70,8 @@ export default function Home() {
               type={showPassword ? "text" : "password"}
               placeholder="パスワード"
               className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <button
               type="button"
@@ -63,12 +88,13 @@ export default function Home() {
               type="text"
               placeholder="アクティベーションコード"
               className="w-full px-2 h-8 pl-2 pr-1.5 py-4 bg-white/30 dark:border-[#2F2F8A] dark:bg-white rounded-[5px] shadow border border-white backdrop-blur-[20px]"
+              value={activationCode}
+              onChange={(e) => setActivationCode(e.target.value)}
             />
           </div>
 
           <button
-            type="button"
-            onClick={toggleModal}
+            type="submit"
             className="w-full bg-green-500 dark:bg-[#2E1367] text-white py-2 mt-[40px] rounded-md hover:bg-green-600 transition" style={{ marginTop: '40px' }}>
             新規登録
           </button>
